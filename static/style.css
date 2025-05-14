@@ -1,0 +1,182 @@
+/* General Body and Background */
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://t4.ftcdn.net/jpg/01/44/12/19/360_F_144121925_25DyTUqQid2PL84TiasEhysg5tAx4Q9x.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Grocery App Title */
+.grocery-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 64px;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(to right, #4CAF50, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+}
+
+/* Page Sub-Heading */
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Container */
+.form-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-top: 20px;
+}
+
+/* Form Label */
+.form-box label {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Text and Date Input */
+.form-box input[type="text"],
+.form-box input[type="date"] {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Submit Button */
+.form-box input[type="submit"] {
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-box input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Table Style */
+table {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+th, td {
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    font-size: 16px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+/* Add Link Button */
+.add-link {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.add-link:hover {
+    background-color: #218838;
+}
+
+/* Expiry Indicator */
+td.expired {
+    background-color: rgba(255, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+td.valid {
+    background-color: rgba(0, 128, 0, 0.1);
+    font-weight: bold;
+}
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-family: 'Pacifico', cursive;
+    color: #2ecc71;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    text-align: center; /* center-aligns the text */
+    width: 100%;         /* spans full width to allow centering */
+}
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto; /* this keeps the whole box centered */
+}
