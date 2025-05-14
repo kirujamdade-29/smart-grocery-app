@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🛒 Smart Grocery App</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<h1 class="grocery-title">🛍️ Smart Grocery App</h1>
+ 
+    <h2>🧾 Grocery Items</h2>
+<table>
+<thead>
+<tr>
+<th>🥬 Name</th>
+<th>📅 Expiry Date</th>
+<th>✅ Status</th>
+<th>🗑️ Action</th>
+</tr>
+</thead>
+<tbody>
+
+        {% for item in items %}
+<tr>
+<td>{{ item.name }}</td>
+<td>{{ item.expiry }}</td>
+<td style="color: {{ 'red' if item.expired else 'green' }}; font-weight: bold;">
+
+                    {{ '❌ Expired' if item.expired else '✔️ Valid' }}
+</td>
+<td>
+<form action="{{ url_for('delete_item', index=loop.index0) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
+<button type="submit" class="delete-button">🗑️ Delete</button>
+</form>
+</td>
+</tr>
+
+        {% endfor %}
+</tbody>
+</table>
+ 
+    <a href="{{ url_for('add_item') }}" class="add-link">➕ Add New Item</a>
+</body>
+</html>
+
+ 
