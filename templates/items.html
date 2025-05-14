@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Items</title>
+</head>
+<body>
+    <h2>All Grocery Items</h2>
+    <ul>
+        {% for item in items %}
+        <li>
+            {{ item.name }} | Expiry: {{ item.expiry }} | {% if item.expired %}❌ Expired{% else %}✅ Valid{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
